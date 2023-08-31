@@ -1,4 +1,4 @@
-# Кроговорот знаний
+# Круговорот знаний
 
 [![BGC](https://github.com/unhappymonday/Znaniya/blob/main/znaniya.png)](https://krugovorotznaniya.ru/index.html)
 
