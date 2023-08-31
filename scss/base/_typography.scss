@@ -1,0 +1,91 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+
+// font-family and color
+h1,
+h2,
+.main__slogan,
+.title__highlight,
+.transition__text,
+.contacts__link,
+.product__header-title,
+.review__title,
+.review__btn {
+  font-family: var.$heading;
+  color: var.$title;
+}
+
+.text,
+.chapter__link {
+  font-family: var.$text-m;
+  color: var.$main;
+}
+
+.main__text {
+  font-family: var.$text-i;
+  color: var.$main;
+}
+
+.transition__link,
+.main__btn {
+  font-family: var.$text-b;
+  color: #fff;
+}
+
+.footer__title,
+.contacts__link {
+  color: #fff;
+}
+
+// font-size
+.menu__link,
+.main__description,
+.transition__link,
+.transition__text,
+.main__text {
+  @include m.math(font-size, 32, 14);
+}
+
+.main__description {
+  line-height: 150%;
+}
+
+.main__title {
+  @include m.math(font-size, 64, 24);
+}
+
+.main__slogan,
+.review__btn {
+  @include m.math(font-size, 40, 18);
+}
+
+.about__text {
+  @include m.math(font-size, 18, 14);
+  line-height: 160%;
+}
+
+.product__header-title,
+.review__title {
+  @include m.math(font-size, 48, 20);
+}
+
+.card__text {
+  @include m.adaptive(1920px, 1200px, font-size, 30px, 20px);
+}
+
+.footer__title {
+  @include m.math(font-size, 64, 24);
+}
+
+.contacts__link {
+  @include m.math(font-size, 24, 16);
+}
+
+.main__text,
+.chapter__link,
+.modal__text {
+  @include m.math(font-size, 24, 14);
+  @include m.adaptive(1920px, 860px, line-height, 120%, 156%);
+}
+

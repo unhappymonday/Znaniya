@@ -1,0 +1,33 @@
+// effects
+$shadow-card: 4px 4px 4px 0 rgba(0, 0, 0, .25);
+$hover-btn: 0 2px 4px 0 rgba(0, 0, 0, .25);
+$active-btn: inset 0 2px 4px 0 rgba(0, 0, 0, .25);
+
+// fonts
+$heading: 'Dela Gothic', 'Centary Gothic', sans-serif;
+$text-m: 'cormorantmedium', 'Times New Roman', serif;
+$text-b: 'cormorantbold', 'Times New Roman', serif;
+$text-i: 'cormorantmedium_italic', 'Times New Roman', serif;
+
+//btn-order radius
+$btn-radius: 50px 5px 50px 5px;
+$nav-radius: 0 0 50px 50px;
+$card-radius: 25px;
+
+// color
+$bgc-body: #F9F9F9;
+$bgc-base: #298F9B;
+$bgc-card: #EDEDED;
+$btn-hover: #45A5B0;
+$btn-active: #0E555E;
+$btn-focus: #3C4063;
+
+// font-color
+$main: #181818;
+$title: #D34D4A;
+$link-hover: #FFE478;
+$link-active: #FFCC00;
+
+// math
+$max-w: 1520;
+$min-w: 320;

@@ -1,0 +1,28 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+.product__card {
+  background-color: var.$bgc-card;
+  border-radius: var.$card-radius;
+  box-shadow: var.$shadow-card;
+  margin-top: 30px;
+  margin-right: 5px;
+  @include m.math-padY(padding-top, padding-bottom, 50, 40);
+  @include m.math-padX(padding-right, padding-left, 32, 15);
+  @include m.adaptive(1920px, 1200px, width, 350px, 300px);
+
+  .card__content{
+    @include m.display($diraction: column, $axisX: center, $axisY: center);
+  }
+
+  .card__icon {
+    @include m.adaptive(1920px, 1200px, width, 140px, 100px);
+    @include m.adaptive(1920px, 1200px, height, 110px, 80px);
+    @include m.adaptive(1920px, 1200px, background-size, 140px 110px, 100px 80px);
+    background-repeat: no-repeat;
+  }
+  
+  .card__text {
+    @include m.adaptive(1920px, 1200px, padding-top, 80px, 40px);
+  }
+}

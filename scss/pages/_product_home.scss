@@ -1,0 +1,46 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+.product__header-pic {
+  background-image: url(../img/svg/product__vector.svg);
+  width: 195px;
+  height: 170px;
+  @include m.adaptive(848px, 428px, width, 150px, 80px);
+  @include m.adaptive(848px, 428px, height, 125px, 70px);
+  @include m.adaptive(848px, 428px, background-size, 150px 125px, 80px 70px);
+}
+
+.title__highlight {
+  font-size: 110px;
+  line-height: .75;
+  @include m.adaptive(1200px, 428px, font-size, 96px, 56px);
+  transform: translateX(-50px);
+  @include m.adaptive(1200px, 848px, transform, translateX(320px), translateX(90px));
+  padding-top: .5rem;
+}
+
+.product__header-title {
+  @include m.adaptive(1920px, 1200px, padding-top, 0, 1rem);
+}
+
+.icon-game {
+  background-image: url(../img/svg/card_icon-1.svg);
+}
+
+.icon-file {
+  background-image: url(../img/svg/card_icon-2.svg);
+}
+
+.icon-trainer {
+  background-image: url(../img/svg/card_icon-3.svg);
+}
+
+.product__header-pic {
+  animation: circle 9s linear infinite;
+}
+
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,50 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+.about__img {
+  @include m.adaptive(1200px, 428px, width, 400px, 250px)
+}
+
+.about__img_Lera {
+  @include m.adaptive(1200px, 428px, width, 400px, 250px);
+}
+
+.container__second, .container__third {
+  position: absolute;
+  top: 0;
+}
+
+.about__article {
+  padding: 1.5rem 3.75rem 0; 
+}
+
+.about__text:not(:last-child) {
+  padding-bottom: 1.5rem;
+}
+
+.btn__slide_next, 
+.btn__slide_prev {
+  position: absolute;
+  top: 46.5%;
+  right: 1.5%;
+  background-color: transparent;
+  border: none;
+  background: url(../img/svg/btn-slide.svg) no-repeat;
+  width: 30px;
+  height: 60px;
+  box-shadow: var.$hover-btn;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    &:active {
+      box-shadow: var.$active-btn;
+    }
+}
+
+.btn__slide_prev {
+  transform: rotate(180deg);
+  left: 1.5%;
+}
+
+.about__link {
+  background-color: var.$link-hover;
+  color: var.$main;
+}

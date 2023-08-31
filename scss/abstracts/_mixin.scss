@@ -1,0 +1,81 @@
+@use "variables" as var;
+
+
+// flex
+@mixin display($flex: flex, $diraction: row, $axisX: center, $axisY: center) {
+  display: $flex;
+  flex-direction: $diraction;
+  justify-content: $axisX;
+  align-items: $axisY;
+}
+
+// button
+@mixin btn-status($default: var.$bgc-base, $hover: var.$btn-hover, $focus: var.$btn-focus, $active: var.$btn-active) {
+  border-radius: var.$btn-radius;
+  background-color: $default;
+  color: white;
+  transition: background-color .1s ease-out, box-shadow .1s ease-out;
+  &:hover {
+    background-color: $hover;
+    box-shadow: var.$hover-btn;
+  }
+  &:focus-visible {
+    background-color: $default;
+    border: 2px solid $focus inset;
+  }
+  &:active {
+    background-color: $active;
+    box-shadow: var.$active-btn;
+  }
+}
+
+// link
+@mixin link-status($default: white, $hover: var.$link-hover, $focus: var.$link-hover, $active: var.$link-active) {
+  color: $default;
+  transition: color .2s ease-out;
+  &:hover {
+    color: $hover
+  }
+  &:focus-visible {
+    border: 1px solid $hover;
+  }
+  &:active {
+    color: $active;
+  }
+}
+
+
+//width-block
+@mixin adaptive($block-d, $block-m, $property, $value-d, $value-m) {
+  @media (max-width: $block-d) {
+    @if ($block-d == $block-d) {
+        #{$property}: $value-d;
+      // width: min(50%, 50% + 1vw);
+  }
+}
+  @media (max-width: $block-m) {
+    @if($block-m == $block-m) {
+        #{$property}: $value-m;
+      // width: max(320px, 50% + 1vw);
+    } 
+  }
+}
+
+//math
+@mixin math($property, $max-size, $min-size) {
+  $addsize: $max-size - $min-size;
+  #{$property}: calc(#{$min-size + px} + #{$addsize} * ((100vw - #{var.$min-w + px}) / (#{var.$max-w} - #{var.$min-w})));
+}
+
+@mixin math-padY($property-1, $property-2, $max-size, $min-size) {
+  $addsize: $max-size - $min-size;
+  #{$property-1}: calc(#{$min-size + px} + #{$addsize} * ((100vw - #{var.$min-w + px}) / (#{var.$max-w} - #{var.$min-w})));
+  #{$property-2}: calc(#{$min-size + px} + #{$addsize} * ((100vw - #{var.$min-w + px}) / (#{var.$max-w} - #{var.$min-w})));
+}
+
+@mixin math-padX($property-1, $property-2, $max-size, $min-size) {
+  $addsize: $max-size - $min-size;
+  #{$property-1}: calc(#{$min-size + px} + #{$addsize} * ((100vw - #{var.$min-w + px}) / (#{var.$max-w} - #{var.$min-w})));
+  #{$property-2}: calc(#{$min-size + px} + #{$addsize} * ((100vw - #{var.$min-w + px}) / (#{var.$max-w} - #{var.$min-w})));
+}
+

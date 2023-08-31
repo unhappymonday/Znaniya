@@ -1,0 +1,26 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+.main__btn,
+.transition__btn,
+.product__btn  {
+  @include m.btn-status();
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+.main__btn {
+  @include m.math(font-size, 32, 20);
+  @include m.math-padX(padding-left, padding-right, 64, 24);
+}
+
+.transition__btn {
+  @include m.math(font-size, 32, 14);
+  @include m.math-padX(padding-left, padding-right, 64, 14);
+}
+
+.product__btn {
+  @include m.math(font-size, 24, 16);
+  border-radius: 50px;
+  @include m.math(padding, 16, 8)
+}

@@ -1,0 +1,69 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+.main__container {
+  border-bottom: 1px solid #000;
+  margin: 0 5%;
+}
+
+.main__slogan {
+  padding-top: 1rem;
+}
+
+.main__description {
+  padding: 3rem 1rem 3.125rem;
+}
+
+.main__decor {
+  position: absolute;
+  right: 40px;
+  @include m.adaptive(1920px, 1100px, bottom, max(28%, 100px), min(110px, 28%));
+  @include m.adaptive(1920px, 800px, opacity, 1, 0);
+  width: min(444px, 30%);
+  height: max(260px, 369px);
+}
+
+.triangle {
+  opacity: 0;
+}
+
+.first__triangle {
+  opacity: 0;
+  animation: visible .5s ease-in 1s forwards;
+}
+
+.second__triangle {
+  opacity: 0;
+  animation: visible .5s ease-in forwards;
+}
+
+.third__triangle {
+  opacity: 0;
+  animation: visible .5s ease-in 2s forwards;
+}
+
+.main__decor_line {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: track 2s ease-in-out .5s forwards;
+}
+
+@keyframes track {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes visible {
+  100% {
+    opacity: 100;
+  }
+}
+
+.main__separator_container {
+  padding-top: 30px;
+}
+
+.main__separator {
+  background-image: url(../img/svg/squares.svg);
+}

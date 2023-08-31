@@ -1,0 +1,52 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+.review__title {
+  padding-bottom: 30px;
+}
+
+.review__btn {
+  width: 90vw;
+  padding: 30px;
+  border-top: 1px solid #000;
+  &:hover {
+    background-color: var.$bgc-base;
+    color: white;
+  }
+  
+  &:active {
+    background-color: rgba(var.$bgc-base, .5);
+  }
+  
+  &:focus {
+    background-color: var.$bgc-base;
+    color: white;
+  }
+}
+
+.btn_border-bottom {
+  border-bottom: 1px solid #000;
+}
+
+.chapter__item {
+  padding: 16px 32px 16px;
+}
+
+.chapter__link {
+  text-decoration: underline;
+}
+
+.accordion {
+  display: grid;
+  grid-template-rows:  0fr;
+  transition: grid-template-rows .5s;
+  align-self: start;
+}
+
+.accordion > ul {
+  overflow: hidden;
+}
+
+.accordion.open {
+  grid-template-rows: 1fr;
+}

@@ -1,0 +1,40 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+//Main
+
+.main::before {
+  content: "";
+  width: 90%;
+  border-top: solid 1px #000;
+  position: absolute;
+  top: -48px;
+  left: 5%;
+}
+
+.main::after {
+  content: "";
+  width: max(320px, 55%);
+  height: 70px;
+  border: 1px solid #000;
+  border-radius: var.$nav-radius;
+  position: absolute;
+  background-color: $bgc-card;
+  top: -48px;
+  @include m.adaptive(1920px, 580px, left, 22.5%, calc(50% - 160px));
+}
+
+.main__content-container {
+  width: 70%;
+}
+
+.main__content-container {
+  padding-top: 40px;
+  padding-bottom: 1.5rem;
+}
+
+.main__separator {
+  @include m.adaptive(1920px, 648px, width, 100px, 56px);
+  @include m.adaptive(1920px, 648px, background-size, 100px 100px, 56px 56px);
+  aspect-ratio: 1 / 1;
+}

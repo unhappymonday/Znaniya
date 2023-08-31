@@ -1,0 +1,33 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+.transition__container {
+  justify-content: space-between;
+}
+
+.transition__content {
+  padding-left: 10px;
+}
+
+.transition__decor {
+  background-image: url(../img/svg/squares.svg);
+  background-repeat: repeat;
+  width: 25%;
+  height: 440px;
+  @include m.adaptive(1200px, 860px, height, 340px, 260px);
+  background-size: 130px 130px;
+  @include m.adaptive(1200px, 860px, background-size, 100px 100px, 48px 48px);
+}
+
+.left-decor {
+  transform: rotate(180deg);
+}
+
+.transition__text {
+  @include m.math(padding-bottom, 40, 20);
+  // padding-bottom: 40px;
+
+    &:last-child {
+      @include m.math(padding-top, 40, 20);
+    }
+}

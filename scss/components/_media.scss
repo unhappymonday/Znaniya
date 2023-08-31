@@ -1,0 +1,43 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as var;
+
+@media (max-width: 1200px) {
+  .footer__container {
+    justify-content: center;
+  }
+
+  .contacts__icon-Y {
+    width: 32px;
+    height: 16px;
+  }
+  .contacts__icon-T {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .product__card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 428px) {
+
+  .main__decor {
+    display: none;
+  }
+
+  .about__article {
+    padding: 1.5rem 1.875rem 0;
+  }
+
+  .contacts__icon-Y {
+    width: 32px;
+    height: 16px;
+  }
+
+}

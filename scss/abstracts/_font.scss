@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Dela Gothic';
+  src: local('delagothicone-regular')
+       url('../font/delagothicone-regular-webfont.woff2') format('woff2'),
+       url('../font/delagothicone-regular-webfont.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'cormorantbold';
+  src: local('cormorant-bold')
+       url('../font/cormorant-bold-webfont.woff2') format('woff2'),
+       url('../font/cormorant-bold-webfont.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'cormorantmedium';
+  src: local('cormorant-medium')
+       url('../font/cormorant-medium-webfont.woff2') format('woff2'),
+       url('../font/cormorant-medium-webfont.woff') format('woff');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'cormorantmedium_italic';
+  src: local('cormorant-mediumitalic')
+       url('../font/cormorant-mediumitalic-webfont.woff2') format('woff2'),
+       url('../font/cormorant-mediumitalic-webfont.woff') format('woff');
+  font-display: fallback;
+}
